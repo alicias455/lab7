@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Pixabay Search </title>
+        <style>
+            .column{
+                float: left;
+                padding: 5px;
+                margin-left: 60px;
+            }
+            .row::after{
+                content: "";
+                clear: both;
+                display: table;
+            }
+            body{
+                text-align: center;
+            }
+            h1{
+                font-family: "Curlz MT";
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1> Pixabay Search</h1>
+<!--        action is the attribute-->
+        <form action="/results">
+            Keyword: <input type="text" name="keyword"><br>
+            Orientation: <select name="orient">
+                <option value="">Select One</option>
+                <option value="h">Horizontal</option>
+                <option value="v">Vertical</option>
+            </select>
+            <button>Search</button>
+        </form> <br>
+
+        <div class="row">
+            <div class="column">
+                <% randomIndex = Math.floor(Math.random() * image.hits.length); %>
+                Likes: <%= image.hits[randomIndex].likes %> <br>
+                <img src='<%= image.hits[randomIndex].largeImageURL %>' width="250">
+            </div>
+
+            <div class="column">
+                <% randomIndex1 = Math.floor(Math.random() * image.hits.length); %>
+                Likes: <%= image.hits[randomIndex1].likes %><br>
+                <img src='<%= image.hits[randomIndex1].largeImageURL %>' width="250">
+            </div>
+
+            <div class="column">
+                <% randomIndex2 = Math.floor(Math.random() * image.hits.length); %>
+                Likes: <%= image.hits[randomIndex2].likes %><br>
+                <img src='<%= image.hits[randomIndex2].largeImageURL %>' width="250">
+            </div>
+
+            <div class="column">
+                <% randomIndex3 = Math.floor(Math.random() * image.hits.length); %>
+            Likes: <%= image.hits[randomIndex3].likes %><br>
+            <img src='<%= image.hits[randomIndex3].largeImageURL %>' width="250">
+            </div>
+        </div>
+
+    </body>
+</html>

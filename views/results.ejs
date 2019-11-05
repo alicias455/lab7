@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Pixabay Search </title>
+    <style>
+        .column{
+            float: left;
+            padding: 5px;
+            margin-left: 60px;
+        }
+        .row::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+        body{
+            text-align: center;
+        }
+        h1{
+            font-family: "Curlz MT";
+        }
+    </style>
+</head>
+
+<body>
+
+<h1> Pixabay Search Results</h1>
+<form action="/results">
+    Keyword: <input type="text" name="keyword"><br>
+    Orientation: <select name="orient">
+        <option value="">Select One</option>
+        <option value="h">Horizontal</option>
+        <option value="v">Vertical</option>
+    </select>
+    <button>Search</button>
+</form>
+<br>
+
+<div class="row">
+    <div class="column">
+        <% randomIndex = Math.floor(Math.random() * images.hits.length); %>
+        Likes: <%= images.hits[randomIndex].likes %> <br>
+        <img src='<%= images.hits[randomIndex].largeImageURL %>' width="250" id="1">
+    </div>
+
+    <div class="column">
+        <% randomIndex1 = Math.floor(Math.random() * images.hits.length); %>
+        Likes: <%= images.hits[randomIndex1].likes %><br>
+        <img src='<%= images.hits[randomIndex1].largeImageURL %>' width="250" id="2">
+    </div>
+
+    <div class="column">
+        <% randomIndex2 = Math.floor(Math.random() * images.hits.length); %>
+        Likes: <%= images.hits[randomIndex2].likes %><br>
+        <img src='<%= images.hits[randomIndex2].largeImageURL %>' width="250" id="3">
+    </div>
+
+    <div class="column">
+        <% randomIndex3 = Math.floor(Math.random() * images.hits.length); %>
+        Likes: <%= images.hits[randomIndex3].likes %><br>
+        <img src='<%= images.hits[randomIndex3].largeImageURL %>' width="250" id="4">
+    </div>
+</div>
+
+</body>
+</html>
