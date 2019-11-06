@@ -11,6 +11,16 @@
   "dependencies": {
     "ejs": "^2.7.1",
     "express": "^4.17.1",
-    "request": "^2.88.0"
-  }
+    "request": "^2.88.0",
+    "save": "^2.4.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alicias455/lab7.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alicias455/lab7/issues"
+  },
+  "homepage": "https://github.com/alicias455/lab7#readme"
 }
